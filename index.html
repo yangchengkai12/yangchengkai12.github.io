@@ -2107,7 +2107,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1686292359028),
+    lastupdate: new Date(1686632687927),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2523,9 +2523,133 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
         
+          
+        
+          
+        
+          
+        
       
     
     
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/13/spark（YARN模式）/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Hexo">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/06/13/spark%EF%BC%88YARN%E6%A8%A1%E5%BC%8F%EF%BC%89/"  itemprop="url">
+        YARN
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        1.Spark On YARN 环境搭建1.确保HADOOP_CONF_DIR和YARN_CONF_DIR的环境变量正确；
+2.启动HDFS集群，zookeeper和StandAlone集群，并且启动历史服务器。
+3.利用bin&#x2F;pyspark –master yarn –deploy-mode client将spark连接到YARN集群的客户端模式下；
+
+4.测试；
+5.	查看历...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-06-13T12:48:20+08:00">2023-06-13</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/06/13/spark%EF%BC%88YARN%E6%A8%A1%E5%BC%8F%EF%BC%89/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/13/spark(HA)环境部署/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Hexo">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/06/13/spark(HA)%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/"  itemprop="url">
+        HA
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        spark（HA环境部署）· 前提: 确保Zookeeper 和 HDFS 均已经启动
+1.先在spark-env.sh中, 删除: SPARK_MASTER_HOST=node1
+· 原因: 配置文件中固定master是谁, 那么就无法用到zk的动态切换master功能了.
+2.在spark-env.sh中, 增加:1234SPARK_DAEMON_JAVA_OPTS=&quot;-Dsp...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-06-13T12:48:20+08:00">2023-06-13</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/06/13/spark(HA)%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
       
         
           <div class='post-wrapper'>
@@ -2549,7 +2673,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <h2 class="article-title"  itemprop="name headline">
       <a href="/2023/06/09/spark%20local%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/"  itemprop="url">
-        Jun 9, 2023
+        spark（local）
       </a>
     </h2>
   
@@ -2571,6 +2695,67 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div>
           <a class='readmore' href='/2023/06/09/spark%20local%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/09/spark StandAlone环境部署/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Hexo">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/06/09/spark%20StandAlone%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/"  itemprop="url">
+        StandAlone
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        spark（StandAlone环境部署）1.进入到spark的配置文件目录中1cd  spark/conf
+改名, 去掉后面的.template后缀1mv workers.template workers
+
+2.编辑worker文件1vim workers
+将里面的localhost删除, 添加到workers文件内123node1node2node3
+
+3.配置spark-env.sh文...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-06-09T14:08:12+08:00">2023-06-09</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/06/09/spark%20StandAlone%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/' itemprop="url">
             Read More
           </a>
         </div>
