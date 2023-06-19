@@ -33,17 +33,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Hexo</title>
+  <title>Kafka - Hexo</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="Hexo - John Doe - Hexo">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
+  
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kafka">
 <meta property="og:url" content="http://example.com/2023/06/19/Kafka%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一、Kafka1.什么是Kafka1是一个分布式消息中间件,支持分区的、多副本的、多订阅者的、基于zookeeper 协调的分布式 消息系统·通俗来说: kafka 就是一个存储系统，存储的数据形式为“消息&quot;;它的主要作用类似于蓄水池，起到一个缓冲作用。 2.配置Kafka(1)安装Kafka集群123上传压缩包到&#x2F;export&#x2F;server目录下mv kafka 2.12-2.4.1.">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-06-19T00:07:29.394Z">
-<meta property="article:modified_time" content="2023-06-19T00:07:29.394Z">
+<meta property="article:modified_time" content="2023-06-19T00:53:35.264Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2101,7 +2103,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2109,7 +2111,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1687135906659),
+    lastupdate: new Date(1687137248673),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2460,16 +2462,91 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
     
-      <span hidden itemprop="name headline">
+      <h1 class="title" itemprop="name headline">
+        Kafka
+      </h1>
+      <div class='new-meta-box'>
         
-      </span>
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">请设置文章作者</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-06-19T08:07:29+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Jun 19, 2023</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
     
   </div>
 
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    
+    <h1 id="一、Kafka"><a href="#一、Kafka" class="headerlink" title="一、Kafka"></a>一、Kafka</h1><h2 id="1-什么是Kafka"><a href="#1-什么是Kafka" class="headerlink" title="1.什么是Kafka"></a>1.什么是Kafka</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">是一个分布式消息中间件,支持分区的、多副本的、多订阅者的、基于zookeeper 协调的分布式 消息系统·通俗来说: kafka 就是一个存储系统，存储的数据形式为“消息&quot;;它的主要作用类似于蓄水池，起到一个缓冲作用。</span><br></pre></td></tr></table></figure>
+<h2 id="2-配置Kafka"><a href="#2-配置Kafka" class="headerlink" title="2.配置Kafka"></a>2.配置Kafka</h2><h3 id="1-安装Kafka集群"><a href="#1-安装Kafka集群" class="headerlink" title="(1)安装Kafka集群"></a>(1)安装Kafka集群</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">上传压缩包到/export/server目录下</span><br><span class="line">mv kafka 2.12-2.4.1.tgz /export/server</span><br><span class="line">解压;“tar -zxvf kafka 2.12-2.4.1.tge</span><br></pre></td></tr></table></figure>
+<p><img src="/../images/201.png" class="lazyload" data-srcset="/../images/201.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 201"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">进入配置文件目录&lt;</span><br><span class="line">cd /export/server/kafka 2.11-2.0.0/confige</span><br><span class="line">编辑配置文件u</span><br><span class="line">vi server.properties&lt;</span><br><span class="line">加入一下内容;“</span><br><span class="line">#为依次增长的:0、1、2、3、4.集群中唯一 id --》从0开始，每台不能重复第一块要改的(</span><br><span class="line">brokerid=0</span><br><span class="line">---Logbasic-</span><br><span class="line">#数据存储的目录，第二块要改的&lt;log.dirs=/export/data/kafka-logs</span><br><span class="line">---zookeeper--</span><br><span class="line">#指定 zk 集群地址，第四块要改的&lt;</span><br><span class="line">zookeeper.connect=node1:2181,node2:2181.node3:2181</span><br></pre></td></tr></table></figure>
+<p><img src="/../images/202.png" class="lazyload" data-srcset="/../images/202.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 202"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">将node1 内容分发到 node2，node3 中;Scp -r /export/server/kafka 2.12-2.4.1 root@node2: /export/server-Scp -r /export/server/kafka 2.12-2.4.1 root@node3:/export/server配置环境变量4进入 profile;vi /etc/profile 添加一下内容;“</span><br><span class="line">export KAFKA HOME=/export/server/kafkaKexport PATH=SPATH:SKAFKA HOME/bin</span><br></pre></td></tr></table></figure>
+<p><img src="/../images/203.png" class="lazyload" data-srcset="/../images/203.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 203"></p>
+<h3 id="2-启停集群-在各个节点上启动-启动集群4"><a href="#2-启停集群-在各个节点上启动-启动集群4" class="headerlink" title="(2)启停集群(在各个节点上启动)启动集群4"></a>(2)启停集群(在各个节点上启动)启动集群4</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kafka-server-start.sh -daemon /export/server/kafka/config/server.properties</span><br></pre></td></tr></table></figure>
+<p><img src="/../images/204.png" class="lazyload" data-srcset="/../images/204.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 204"></p>
+<h3 id="3-停止集群"><a href="#3-停止集群" class="headerlink" title="(3)停止集群"></a>(3)停止集群</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kafka-server-stop.sh stope</span><br></pre></td></tr></table></figure>
+<p><img src="/../images/205.png" class="lazyload" data-srcset="/../images/205.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 205"></p>
+<h3 id="4-Kafka一键启动脚本"><a href="#4-Kafka一键启动脚本" class="headerlink" title="(4)Kafka一键启动脚本"></a>(4)Kafka一键启动脚本</h3><p><img src="/../images/206.png" class="lazyload" data-srcset="/../images/206.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 206"></p>
+<h2 id="2-Kafka命令行操作"><a href="#2-Kafka命令行操作" class="headerlink" title="2.Kafka命令行操作"></a>2.Kafka命令行操作</h2><h3 id="1-创建topice"><a href="#1-创建topice" class="headerlink" title="(1)创建topice"></a>(1)创建topice</h3><p><img src="/../images/207.png" class="lazyload" data-srcset="/../images/207.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 207"></p>
+<h3 id="2-手动指定副本的存储位置"><a href="#2-手动指定副本的存储位置" class="headerlink" title="(2)手动指定副本的存储位置"></a>(2)手动指定副本的存储位置</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kafka-topics.sh --create --topic tpc_l --zookeeper nodel:2181 --replica-assignment 0:1,1:2</span><br></pre></td></tr></table></figure>
+<p><img src="/../images/208.png" class="lazyload" data-srcset="/../images/208.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 208"></p>
+<h3 id="3-查看目前-Kafka-中的主题"><a href="#3-查看目前-Kafka-中的主题" class="headerlink" title="(3)查看目前 Kafka 中的主题"></a>(3)查看目前 Kafka 中的主题</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kafka-topics.sh --list --bootstrap-server nodel:9092</span><br></pre></td></tr></table></figure>
+<p><img src="/../images/209.png" class="lazyload" data-srcset="/../images/209.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 209"></p>
+<h3 id="4-查看-topic"><a href="#4-查看-topic" class="headerlink" title="(4)查看 topic"></a>(4)查看 topic</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">列出当前系统中的所有 topic</span><br><span class="line">kafka-topics.sh --zookeeper nodel:2181,node2:2181,node3:2181 –list</span><br></pre></td></tr></table></figure>
+<p><img src="/../images/210.png" class="lazyload" data-srcset="/../images/210.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 210"></p>
+<h3 id="5-查看-topic-详细信息"><a href="#5-查看-topic-详细信息" class="headerlink" title="(5)查看 topic 详细信息"></a>(5)查看 topic 详细信息</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kafka-topics.sh --create --topic tpc 1 --zookeeper nodel:2181</span><br></pre></td></tr></table></figure>
+<p><img src="/../images/211.png" class="lazyload" data-srcset="/../images/211.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 211"></p>
+<h3 id="6-增加分区数"><a href="#6-增加分区数" class="headerlink" title="(6)增加分区数"></a>(6)增加分区数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kafka-topics.sh--alter --topic tpc_l --partitions 3 --zookeepernode1:2181</span><br></pre></td></tr></table></figure>
+<p><img src="/../images/212.png" class="lazyload" data-srcset="/../images/212.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 212"></p>
+<h3 id="7-动态配置-topic-参数"><a href="#7-动态配置-topic-参数" class="headerlink" title="(7)动态配置 topic 参数"></a>(7)动态配置 topic 参数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">添加参数</span><br><span class="line">kafka-configs.sh --zookeeper nodel:2181 --entity-type topics --entityname tpc_1 --alter --add-config compression.type=gzip</span><br></pre></td></tr></table></figure>
+<p><img src="/../images/213.png" class="lazyload" data-srcset="/../images/213.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 213"></p>
+<h3 id="8-消费信息"><a href="#8-消费信息" class="headerlink" title="(8)消费信息"></a>(8)消费信息</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kafka-console-consumer.sh --bootstrap-server nodel:9092,node2:9092node1:9092 --topic tpc 1 --from-beginning</span><br></pre></td></tr></table></figure>
+<p><img src="/../images/214.png" class="lazyload" data-srcset="/../images/214.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 214"></p>
+<h3 id="9-指定要消费的分区和要消费的起始"><a href="#9-指定要消费的分区和要消费的起始" class="headerlink" title="(9)指定要消费的分区和要消费的起始"></a>(9)指定要消费的分区和要消费的起始</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">offsetkafka-console-consumersh --bootstrap-servernode1:9092,node2:9092,node3:9092 --topic tcp l --offset 2 --partition 0</span><br></pre></td></tr></table></figure>
+<p><img src="/../images/215.png" class="lazyload" data-srcset="/../images/215.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 215"></p>
+<h3 id="10-配置管理"><a href="#10-配置管理" class="headerlink" title="(10)配置管理"></a>(10)配置管理</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kafka-configskafka-configs.sh zookeeper nodel: 2181 --describe --entity-type brokers--entity-name 0 --zookeeper nodel:2181</span><br></pre></td></tr></table></figure>
+<p><img src="/../images/216.png" class="lazyload" data-srcset="/../images/216.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 216"></p>
+<h2 id="3-配置管理-kafka-configs"><a href="#3-配置管理-kafka-configs" class="headerlink" title="3.配置管理 kafka-configs"></a>3.配置管理 kafka-configs</h2><h3 id="（1）查看-topic-的配置可以按如下方式执行"><a href="#（1）查看-topic-的配置可以按如下方式执行" class="headerlink" title="（1）查看 topic 的配置可以按如下方式执行"></a>（1）查看 topic 的配置可以按如下方式执行</h3><figure class="highlight plaintext"><figcaption><span>zookeeper nodel: 2181 --describe --entity-typetopics --entity-name tpc 2</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">![图 217](../images/217.png)</span><br><span class="line">### (2)查看 broker的动态配置可以按如下方式执行</span><br></pre></td></tr></table></figure>
+<p>bin&#x2F;kafka-configs.sh zookeeper nodel: 2181 –describe –entity-typebrokers –entity-name 0 –zookeeper nodel:2181</p>
+<pre><code>![图 218](../images/218.png)
+</code></pre>
+
   </div>
   
   
@@ -2493,7 +2570,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-06-19T08:07:29+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-06-19T08:53:35+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：Jun 19, 2023</p>
@@ -2515,7 +2592,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/06/19/Kafka%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/&title= - Hexo&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/06/19/Kafka%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/&title=Kafka - Hexo&summary="
           
           >
           
@@ -2527,7 +2604,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/06/19/Kafka%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/&title= - Hexo&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/06/19/Kafka%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/&title=Kafka - Hexo&summary="
           
           >
           
@@ -2539,7 +2616,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/06/19/Kafka%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/&title= - Hexo&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/06/19/Kafka%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/&title=Kafka - Hexo&summary="
           
           >
           
@@ -2571,6 +2648,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
     <div class="prev-next">
+      
+        <a class='prev' href='/2023/06/19/Flume/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Flume</p>
+          <p class='content'>Flume1、下载flume的gz包1Flume下载页面：http://flume.apache.org/download.html
+2.Flume下载页面：http://flume.apach...</p>
+        </a>
       
       
         <a class='next' href='/2023/06/13/docker/'>
@@ -2636,7 +2719,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <div class='content'>
-      
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%BB%80%E4%B9%88%E6%98%AFKafka"><span class="toc-text">1.什么是Kafka</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E9%85%8D%E7%BD%AEKafka"><span class="toc-text">2.配置Kafka</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85Kafka%E9%9B%86%E7%BE%A4"><span class="toc-text">(1)安装Kafka集群</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%90%AF%E5%81%9C%E9%9B%86%E7%BE%A4-%E5%9C%A8%E5%90%84%E4%B8%AA%E8%8A%82%E7%82%B9%E4%B8%8A%E5%90%AF%E5%8A%A8-%E5%90%AF%E5%8A%A8%E9%9B%86%E7%BE%A44"><span class="toc-text">(2)启停集群(在各个节点上启动)启动集群4</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%81%9C%E6%AD%A2%E9%9B%86%E7%BE%A4"><span class="toc-text">(3)停止集群</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Kafka%E4%B8%80%E9%94%AE%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC"><span class="toc-text">(4)Kafka一键启动脚本</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Kafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C"><span class="toc-text">2.Kafka命令行操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%88%9B%E5%BB%BAtopice"><span class="toc-text">(1)创建topice</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%89%8B%E5%8A%A8%E6%8C%87%E5%AE%9A%E5%89%AF%E6%9C%AC%E7%9A%84%E5%AD%98%E5%82%A8%E4%BD%8D%E7%BD%AE"><span class="toc-text">(2)手动指定副本的存储位置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%9F%A5%E7%9C%8B%E7%9B%AE%E5%89%8D-Kafka-%E4%B8%AD%E7%9A%84%E4%B8%BB%E9%A2%98"><span class="toc-text">(3)查看目前 Kafka 中的主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E6%9F%A5%E7%9C%8B-topic"><span class="toc-text">(4)查看 topic</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E6%9F%A5%E7%9C%8B-topic-%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF"><span class="toc-text">(5)查看 topic 详细信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E5%A2%9E%E5%8A%A0%E5%88%86%E5%8C%BA%E6%95%B0"><span class="toc-text">(6)增加分区数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E5%8A%A8%E6%80%81%E9%85%8D%E7%BD%AE-topic-%E5%8F%82%E6%95%B0"><span class="toc-text">(7)动态配置 topic 参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E6%B6%88%E8%B4%B9%E4%BF%A1%E6%81%AF"><span class="toc-text">(8)消费信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-%E6%8C%87%E5%AE%9A%E8%A6%81%E6%B6%88%E8%B4%B9%E7%9A%84%E5%88%86%E5%8C%BA%E5%92%8C%E8%A6%81%E6%B6%88%E8%B4%B9%E7%9A%84%E8%B5%B7%E5%A7%8B"><span class="toc-text">(9)指定要消费的分区和要消费的起始</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86"><span class="toc-text">(10)配置管理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86-kafka-configs"><span class="toc-text">3.配置管理 kafka-configs</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E6%9F%A5%E7%9C%8B-topic-%E7%9A%84%E9%85%8D%E7%BD%AE%E5%8F%AF%E4%BB%A5%E6%8C%89%E5%A6%82%E4%B8%8B%E6%96%B9%E5%BC%8F%E6%89%A7%E8%A1%8C"><span class="toc-text">（1）查看 topic 的配置可以按如下方式执行</span></a></li></ol></li></ol>
   </div>
 </section>
 
@@ -3130,7 +3213,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/06/19/Kafka配置环境/"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/06/19/Kafka%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/06/19/Kafka%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/","wordCount":0,"datePublished":"2023-06-19T00:07:29.394Z","dateModified":"2023-06-19T00:07:29.394Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/06/19/Kafka配置环境/","name":"Kafka"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Kafka","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/06/19/Kafka%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/06/19/Kafka%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/","wordCount":0,"datePublished":"2023-06-19T00:07:29.394Z","dateModified":"2023-06-19T00:53:35.264Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
