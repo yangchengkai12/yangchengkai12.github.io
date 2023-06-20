@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/2023/06/13/spark（yarn模式）/"/>
+  <link rel="canonical" href="http://example.com/2023/06/20/项目2/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -33,19 +33,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>YARN - Hexo</title>
+  <title>Kafka集群中部署Eagle运维监控 - Hexo</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="Hexo - John Doe - Hexo">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="YARN">
-<meta property="og:url" content="http://example.com/2023/06/13/spark%EF%BC%88YARN%E6%A8%A1%E5%BC%8F%EF%BC%89/index.html">
+<meta property="og:title" content="Kafka集群中部署Eagle运维监控">
+<meta property="og:url" content="http://example.com/2023/06/20/%E9%A1%B9%E7%9B%AE2/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1.Spark On YARN 环境搭建1.确保HADOOP_CONF_DIR和YARN_CONF_DIR的环境变量正确； 2.启动HDFS集群，zookeeper和StandAlone集群，并且启动历史服务器。 3.利用bin&#x2F;pyspark –master yarn –deploy-mode client将spark连接到YARN集群的客户端模式下；  4.测试； 5.	查看历史服务">
+<meta property="og:description" content="Kafka集群中部署Eagle运维监控1．项目来源及背景123456kafka 自身并没有继承监控管理系统, 因此对 kafka 的监控管理比较不便, 好在有大量的第三方监控管理系统来使用,常见的有:Kafka Eagle Kafka Manager(雅虎开源的 Kafka 集群管理器) kafka Web Console 还有 JMX 接口自开发监控管理系统其中，Kafka Eagle最为流行，">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2023-06-13T04:48:20.615Z">
-<meta property="article:modified_time" content="2023-06-13T05:13:23.991Z">
+<meta property="article:published_time" content="2023-06-20T03:17:01.352Z">
+<meta property="article:modified_time" content="2023-06-20T04:14:54.816Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2442,7 +2442,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/13/spark（YARN模式）/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/20/项目2/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2463,7 +2463,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        YARN
+        Kafka集群中部署Eagle运维监控
       </h1>
       <div class='new-meta-box'>
         
@@ -2485,10 +2485,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-06-13T12:48:20+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-06-20T11:17:01+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Jun 13, 2023</p>
+    <p>发布于：Jun 20, 2023</p>
   </a>
 </div>
 
@@ -2511,13 +2511,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h1 id="1-Spark-On-YARN-环境搭建"><a href="#1-Spark-On-YARN-环境搭建" class="headerlink" title="1.Spark On YARN 环境搭建"></a>1.Spark On YARN 环境搭建</h1><h2 id="1-确保HADOOP-CONF-DIR和YARN-CONF-DIR的环境变量正确；"><a href="#1-确保HADOOP-CONF-DIR和YARN-CONF-DIR的环境变量正确；" class="headerlink" title="1.确保HADOOP_CONF_DIR和YARN_CONF_DIR的环境变量正确；"></a>1.确保HADOOP_CONF_DIR和YARN_CONF_DIR的环境变量正确；</h2><p><img src="/../images/92.png" class="lazyload" data-srcset="/../images/92.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 92"></p>
-<h2 id="2-启动HDFS集群，zookeeper和StandAlone集群，并且启动历史服务器。"><a href="#2-启动HDFS集群，zookeeper和StandAlone集群，并且启动历史服务器。" class="headerlink" title="2.启动HDFS集群，zookeeper和StandAlone集群，并且启动历史服务器。"></a>2.启动HDFS集群，zookeeper和StandAlone集群，并且启动历史服务器。</h2><p><img src="/../images/93.png" class="lazyload" data-srcset="/../images/93.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 93"></p>
-<h2 id="3-利用bin-x2F-pyspark-–master-yarn-–deploy-mode-client将spark连接到YARN集群的客户端模式下；"><a href="#3-利用bin-x2F-pyspark-–master-yarn-–deploy-mode-client将spark连接到YARN集群的客户端模式下；" class="headerlink" title="3.利用bin&#x2F;pyspark –master yarn –deploy-mode client将spark连接到YARN集群的客户端模式下；"></a>3.利用bin&#x2F;pyspark –master yarn –deploy-mode client将spark连接到YARN集群的客户端模式下；</h2><p><img src="/../images/94.png" class="lazyload" data-srcset="/../images/94.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 94"></p>
-<p><img src="/../images/95.png" class="lazyload" data-srcset="/../images/95.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 95"></p>
-<h2 id="4-测试；"><a href="#4-测试；" class="headerlink" title="4.测试；"></a>4.测试；</h2><p><img src="/../images/96.png" class="lazyload" data-srcset="/../images/96.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 96"></p>
-<h2 id="5-查看历史服务器；"><a href="#5-查看历史服务器；" class="headerlink" title="5.	查看历史服务器；"></a>5.	查看历史服务器；</h2><p><img src="/../images/97.png" class="lazyload" data-srcset="/../images/97.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 97"></p>
-<p><img src="/../images/98.png" class="lazyload" data-srcset="/../images/98.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 98"></p>
+    <h1 id="Kafka集群中部署Eagle运维监控"><a href="#Kafka集群中部署Eagle运维监控" class="headerlink" title="Kafka集群中部署Eagle运维监控"></a>Kafka集群中部署Eagle运维监控</h1><h2 id="1．项目来源及背景"><a href="#1．项目来源及背景" class="headerlink" title="1．项目来源及背景"></a>1．项目来源及背景</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">kafka 自身并没有继承监控管理系统, 因此对 kafka 的监控管理比较不便, 好在有大量的第三方监控管理系统来使用,常见的有:</span><br><span class="line">Kafka Eagle </span><br><span class="line">Kafka Manager(雅虎开源的 Kafka 集群管理器) </span><br><span class="line">kafka Web Console </span><br><span class="line">还有 JMX 接口自开发监控管理系统</span><br><span class="line">其中，Kafka Eagle最为流行，本项目则希望同学们可以成功部署Kafka Eagle，完成对kafka集群的基本监控。</span><br></pre></td></tr></table></figure>
+<p><img src="/../images/240.png" class="lazyload" data-srcset="/../images/240.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 240"></p>
 
   </div>
   
@@ -2542,10 +2537,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-06-13T13:13:23+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-06-20T12:14:54+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Jun 13, 2023</p>
+    <p>更新于：Jun 20, 2023</p>
   </a>
 </div>
 
@@ -2564,7 +2559,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/06/13/spark%EF%BC%88YARN%E6%A8%A1%E5%BC%8F%EF%BC%89/&title=YARN - Hexo&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/06/20/%E9%A1%B9%E7%9B%AE2/&title=Kafka集群中部署Eagle运维监控 - Hexo&summary="
           
           >
           
@@ -2576,7 +2571,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/06/13/spark%EF%BC%88YARN%E6%A8%A1%E5%BC%8F%EF%BC%89/&title=YARN - Hexo&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/06/20/%E9%A1%B9%E7%9B%AE2/&title=Kafka集群中部署Eagle运维监控 - Hexo&summary="
           
           >
           
@@ -2588,7 +2583,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/06/13/spark%EF%BC%88YARN%E6%A8%A1%E5%BC%8F%EF%BC%89/&title=YARN - Hexo&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/06/20/%E9%A1%B9%E7%9B%AE2/&title=Kafka集群中部署Eagle运维监控 - Hexo&summary="
           
           >
           
@@ -2621,17 +2616,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2023/06/13/docker/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>docker</p>
-          <p class='content'>三、安装docker1.在安装docker之前，先初始化机器环境，如果之前安装过旧版本的docker，应该先使用命令进行卸载。（我这里之前没有安装过旧版本的docker，就不进行写在操作了）2....</p>
-        </a>
       
-      
-        <a class='next' href='/2023/06/13/spark(HA)%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/'>
-          <p class='title'>HA<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>spark（HA环境部署）· 前提: 确保Zookeeper 和 HDFS 均已经启动
-1.先在spark-env.sh中, 删除: SPARK_MASTER_HOST=node1
-· 原因: ...</p>
+        <a class='next' href='/2023/06/19/sqoop/'>
+          <p class='title'>sqoop<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>sqoop（一）sqoop介绍Apache Sqoop是在Hadoop生态体系和RDBMS体系&#96;之间传送数据的一种工具。
+Sqoop工作机制是将导入或导出命令翻译成mapreduce程序...</p>
         </a>
       
     </div>
@@ -2650,7 +2639,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2023/06/13/spark%EF%BC%88YARN%E6%A8%A1%E5%BC%8F%EF%BC%89/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2023/06/20/%E9%A1%B9%E7%9B%AE2/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2692,7 +2681,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <div class='content'>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%A1%AE%E4%BF%9DHADOOP-CONF-DIR%E5%92%8CYARN-CONF-DIR%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E6%AD%A3%E7%A1%AE%EF%BC%9B"><span class="toc-text">1.确保HADOOP_CONF_DIR和YARN_CONF_DIR的环境变量正确；</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%90%AF%E5%8A%A8HDFS%E9%9B%86%E7%BE%A4%EF%BC%8Czookeeper%E5%92%8CStandAlone%E9%9B%86%E7%BE%A4%EF%BC%8C%E5%B9%B6%E4%B8%94%E5%90%AF%E5%8A%A8%E5%8E%86%E5%8F%B2%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%82"><span class="toc-text">2.启动HDFS集群，zookeeper和StandAlone集群，并且启动历史服务器。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%88%A9%E7%94%A8bin-x2F-pyspark-%E2%80%93master-yarn-%E2%80%93deploy-mode-client%E5%B0%86spark%E8%BF%9E%E6%8E%A5%E5%88%B0YARN%E9%9B%86%E7%BE%A4%E7%9A%84%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%A8%A1%E5%BC%8F%E4%B8%8B%EF%BC%9B"><span class="toc-text">3.利用bin&#x2F;pyspark –master yarn –deploy-mode client将spark连接到YARN集群的客户端模式下；</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E6%B5%8B%E8%AF%95%EF%BC%9B"><span class="toc-text">4.测试；</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%9F%A5%E7%9C%8B%E5%8E%86%E5%8F%B2%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%9B"><span class="toc-text">5.	查看历史服务器；</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%EF%BC%8E%E9%A1%B9%E7%9B%AE%E6%9D%A5%E6%BA%90%E5%8F%8A%E8%83%8C%E6%99%AF"><span class="toc-text">1．项目来源及背景</span></a></li></ol>
   </div>
 </section>
 
@@ -3186,7 +3175,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/06/13/spark（YARN模式）/","name":"YARN"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"YARN","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/06/13/spark%EF%BC%88YARN%E6%A8%A1%E5%BC%8F%EF%BC%89/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/06/13/spark%EF%BC%88YARN%E6%A8%A1%E5%BC%8F%EF%BC%89/","wordCount":0,"datePublished":"2023-06-13T04:48:20.615Z","dateModified":"2023-06-13T05:13:23.991Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/06/20/项目2/","name":"Kafka集群中部署Eagle运维监控"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Kafka集群中部署Eagle运维监控","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/06/20/%E9%A1%B9%E7%9B%AE2/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/06/20/%E9%A1%B9%E7%9B%AE2/","wordCount":0,"datePublished":"2023-06-20T03:17:01.352Z","dateModified":"2023-06-20T04:14:54.816Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
